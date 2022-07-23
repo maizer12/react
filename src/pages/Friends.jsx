@@ -22,6 +22,7 @@ const Friends = () => {
 						className='floor__name'
 					>
 						Стать
+						Проверка
 						<img
 							className={floorOpen ? 'floor__img-active' : ''}
 							src='./img/arrow-bottom.svg'
