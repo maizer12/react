@@ -1,5 +1,4 @@
 .profile {
-	width: 30vh;
 	background-color: #aab2bb;
 	&__info {
 		padding: 10px 20px;
@@ -20,7 +19,8 @@
 		flex-direction: column;
 		row-gap: 20px;
 		span {
-			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+				sans-serif;
 			font-size: 17px;
 			font-weight: 600;
 			line-height: 1.2;
@@ -30,11 +30,26 @@
 			color: #5f6164;
 			display: inline-block;
 		}
-		p{
+		p,
+		a {
 			line-height: 1.2;
 			cursor: pointer;
 			font-family: 700;
 			font-size: 17px;
+		}
+		a {
+			color: rgb(0, 0, 0);
+			display: block;
+			transition: 0.4s;
+			&:hover {
+				color: red;
+			}
+		}
+		&:nth-child(2) {
+			a{transition: 0.7s;
+				&:hover {
+				color: rgb(77, 1, 255);
+			}}
 		}
 	}
 }

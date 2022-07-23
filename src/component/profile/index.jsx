@@ -18,11 +18,12 @@ const Profile = () => {
 					</li>
 					<li className='profile__item'>
 						<span>Маіл</span>
-						<p>{mail}</p>
+						<></>
+						<a href={'mailto:' + mail}>{mail}</a>
 					</li>
 					<li className='profile__item'>
 						<span>Телеграм</span>
-						<p>@{telegram}</p>
+						<a href={'https://telegram.me/' + telegram}>@{telegram}</a>
 					</li>
 					<li className='profile__item'>
 						<span>Дата регистрации</span>

@@ -25,6 +25,8 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	background-image: url(https://abrakadabra.fun/uploads/posts/2022-01/1642797147_1-abrakadabra-fun-p-krasivii-temno-serii-fon-1.jpg);
+	background-size: cover;
 }
 input,button,textarea{font-family:inherit;}
 
@@ -47,6 +49,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 #root{
 	display: flex;
+	justify-content: center;
 	overflow: hidden;
 }
 li{
@@ -54,4 +57,9 @@ li{
 }
 .home{
 	display:flex;
+}
+.container{
+	width: 1200px;
+	padding: 0px 10px;
+	display: flex;
 }

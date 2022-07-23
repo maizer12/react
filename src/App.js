@@ -1,11 +1,10 @@
-import { Routes, Route} from "react-router-dom";
-import Navigation from "./component/navigation";
-import Friends from "./pages/Friends";
-import Home from "./pages/Home";
-
+import { Routes, Route } from 'react-router-dom'
+import Navigation from './component/navigation'
+import Friends from './pages/Friends'
+import Home from './pages/Home'
 
 function App() {
-  return (
+	return (
 		<>
 			<Navigation />
 			<Routes>
@@ -16,4 +15,4 @@ function App() {
 	)
 }
 
-export default App;
+export default App

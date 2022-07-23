@@ -4,6 +4,8 @@ import './friends.Module.scss'
 const Friends = () => {
 	const [friendsAdd, setFriendsAdd] = React.useState(false)
 	const [floorOpen, setFloorOpen] = React.useState(false)
+	const florItem = ['Не вибрано', 'Чол', 'Жін']
+	const [florActive, setFlorActive] = React.useState(0)
 	return (
 		<div className='friends'>
 			<ul className='friends-head'>
@@ -22,7 +24,6 @@ const Friends = () => {
 						className='floor__name'
 					>
 						Стать
-						Проверка
 						<img
 							className={floorOpen ? 'floor__img-active' : ''}
 							src='./img/arrow-bottom.svg'
@@ -32,9 +33,16 @@ const Friends = () => {
 					<ul
 						className={`floor__items ${floorOpen ? 'floor__items-active' : ''}`}
 					>
-						<li className='floor__item'>Не вибрано</li>
-						<li className='floor__item'>Чол</li>
-						<li className='floor__item'>Жін</li>
+						{florItem.map((e, i) => (
+							<li
+								onClick={() => setFlorActive(i)}
+								className={`floor__item ${
+									florActive === i ? 'floor__item-active' : ''
+								}`}
+							>
+								{e}
+							</li>
+						))}
 					</ul>
 				</li>
 				<li className='friends-filter__buttons'>
