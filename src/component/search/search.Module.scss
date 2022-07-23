@@ -1,0 +1,29 @@
+.search{
+	position: relative;
+	&__input{
+			padding: 5px;
+			border:1px solid rgba(black, 0.4);
+			
+			&::placeholder{
+				transition: 0.7s;
+			}
+			&:focus{
+				&::placeholder{
+					transform: translateX(-200px);
+				}
+			}
+		}
+	&__btn{
+		transform: rotate(270deg);
+		cursor: pointer;
+		padding: 3px;
+		position: absolute;
+		right: 0;
+		transition: 0.7s;
+		background: none;
+		border: none;
+		&:hover{
+			opacity: 0.6;
+		}
+	}
+}

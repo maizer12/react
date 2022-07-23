@@ -1,0 +1,41 @@
+.message-box{
+	padding: 25px;
+	flex: 1;
+	&__items{
+		display: flex;
+		row-gap: 15px;
+		flex-direction: column;
+		overflow:auto;
+		max-height: 80vh;
+	}
+}
+.item-message{
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	overflow: hidden;
+	&__text{
+		max-width: 500px;
+	}
+	&__photo{
+		object-fit: cover;
+	}
+	&__name-data{
+		width: 500px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__name{
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+	&__message{
+	}
+	&__name-data{
+		display: flex;
+		column-gap: 20px;
+	}
+	&__data{
+		opacity: 0.5;
+	}
+}

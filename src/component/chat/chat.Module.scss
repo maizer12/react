@@ -1,0 +1,43 @@
+.chat {
+	margin: 30px 0 17px;
+}
+.chat-hade {
+	display: flex;
+	justify-content: space-between;
+	font-family: Lato;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 14px;
+	letter-spacing: 0px;
+	color: aliceblue;
+}
+.chat-items {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	height: 400px;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		width: 8px; /* ширина для вертикального скролла */
+		background-color: rgba(black, 0.2);
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: rgb(3, 3, 3);
+		border-radius:10px;
+		cursor: pointer;
+	}
+	&__item {
+		color: aliceblue;
+		cursor: pointer;
+		transition: 0.4s;
+		font-size: 16px;
+		line-height: 1.2;
+		padding: 10px;
+		&:hover {
+			color: rgb(253, 174, 4);
+		}
+	}
+	&__item-active {
+		background-color: rgba(black, 0.4);
+	}
+}

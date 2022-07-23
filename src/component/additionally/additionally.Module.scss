@@ -1,0 +1,62 @@
+.additionally {
+	position: relative;
+	&__button {
+		cursor: pointer;
+
+		svg {
+			path {
+				transition: 0.7s;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					fill: red;
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+}
+.additionally-list {
+	position: absolute;
+	background-color: aliceblue;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	width: 140px;
+	box-shadow: 0 0 5px black;
+	transform: rotateX(90deg);
+	transition: 0.7s;
+	&__active{
+		transform: rotateX(0deg);
+	}
+	&__item {
+		cursor: pointer;
+		font-weight: 600;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+			sans-serif;
+		color: rgb(0, 0, 0);
+		transition: 0.7s;
+		font-size: 15px;
+		position: relative;
+		&::after {
+			content: '';
+			background-color: black;
+			height: 1px;
+			width: 100%;
+			transition: 0.7s;
+			right: 0;
+			bottom: -4px;
+			position: absolute;
+		}
+		&:hover {
+			color: red;
+			&::after {
+				width: 0;
+				background-color: red;
+			}
+		}
+	}
+}

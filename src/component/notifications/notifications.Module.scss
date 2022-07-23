@@ -1,0 +1,86 @@
+.notifications{
+	position: relative;
+	&__item{
+		border-bottom: 1px dashed black;
+		padding: 5px 0;
+	}
+	&__list{
+		padding: 10px;
+		padding-right: 30px;
+		position: absolute;
+		background-color: #fff;
+		top: 20px;
+		box-shadow: 0 0 5px black;
+		right: 20px;
+		z-index: 4;
+		width: 410px;
+		transform: scale(0);
+		transition: 0.7s;
+	}
+	&__list-active{
+		transform: scale(1);
+	}
+	&__close{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		cursor: pointer;
+		transition: 0.7s;
+		&:hover{
+			transform: rotate(90deg);
+		}
+	}
+	
+	&__btn{
+		cursor: pointer;
+		position: relative;
+		background: none;
+		border: none;
+		svg{
+			position: relative;
+			z-index: 1;
+				path{
+					transition: 0.7s;
+				}
+			}
+		
+		&:hover{
+			&::before{
+				background-color:rgb(255, 94, 0);
+			}
+			svg{
+				animation: pause;
+				path{
+					fill: rgb(255, 94, 0);
+				}
+			}
+		}}
+	&__btn-active{
+		svg{
+			animation:  btnAnimation 2s infinite alternate-reverse;
+		}
+		&::before{
+			content: '';
+			z-index: 2;
+			transition: 0.7s;
+			border-radius: 50%;
+			top: 4px;
+			right: 2px;
+			background-color: red;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+		}
+	}
+	}
+	@keyframes btnAnimation{
+		0%{
+			transform: rotate(20deg);
+		}
+		50%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(-20deg);
+		}
+	}

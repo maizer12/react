@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+.chat-info{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	border-bottom: 1px solid rgba(black, 0.4);
+	&__name{
+		font-size: 16px;
+		font-weight: 700px;
+		font-family: 'Lato', sans-serif;
+	}
+	&__setting{
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+	}
+	
+	&__additionally{
+
+	}
+	&__people{
+		display: flex;
+		align-items: center;
+	}
+}

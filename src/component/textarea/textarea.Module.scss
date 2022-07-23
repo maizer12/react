@@ -1,0 +1,63 @@
+.textarea{
+	position:relative;
+	&__input{
+		resize: none;
+		padding: 5px 40px;
+		height: 80px;
+		width: 100%;
+		border: 1px solid rgba(black, 0.4);
+		margin-bottom: -5px;
+		&::placeholder{
+			transition: 0.7s;
+		}
+		&:focus{
+			&::placeholder{
+				transform: translate(-240px);
+			}
+		}
+	}
+	&__list{
+		bottom: 80px;
+		left:0;
+		transform: translateX(0) scale(0);
+		position: absolute;
+		transition: 0.7s;
+	}
+	&__list-open{
+		transform: translateX(-88%) scale(1);
+	}
+	&__emoji{
+		position: absolute;
+		background:none;
+		border:none;
+		z-index: 2;
+		top: 24px;
+		left: 5px;
+		cursor: pointer;
+		opacity: 0.5;
+		&:hover{
+			opacity: 1;
+			transition: 0.7s;
+		}
+	}
+	&__btn{
+		background: none;
+		border: none;
+		cursor: pointer;
+		position: absolute;
+		right: 20px;
+		top: 23px;
+		svg{
+				path{
+					transition: 0.4s;
+				}
+			}
+		&:hover{
+			svg{
+				path{
+					fill: rgb(0, 110, 255);
+				}
+			}
+		}
+	}
+}
