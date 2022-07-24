@@ -1,6 +1,7 @@
 import React from 'react';
 import Correspondence from '../component/correspondence';
 import ListMessenger from '../component/listMessenger';
+import Popap from '../component/popap';
 import Profile from '../component/profile';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
 			<ListMessenger/>
 			<Correspondence/>
 			<Profile/>
+			<Popap/>
 		</div>
 	);
 };

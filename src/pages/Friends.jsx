@@ -10,7 +10,12 @@ const Friends = () => {
 		<div className='friends'>
 			<ul className='friends-head'>
 				<li className='friends-head__search'>
-					<h1>поиск</h1>
+					<input
+						type='text'
+						placeholder="Введіть ім'я"
+						class='friends-head__input'
+					/>
+					<div className='friends-head__btn'>Пошук</div>
 				</li>
 			</ul>
 			<ul className='friends-filter'>

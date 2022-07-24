@@ -1,14 +1,21 @@
-import React from 'react';
+import React from 'react'
 import './additionally.Module.scss'
+import { useSelector, useDispatch } from 'react-redux'
+import { setIndex, setClick} from '../../redux/slices/dopSettingSlice'
 const Additionally = () => {
-	const [menuOpen, setMenuOpen] = React.useState(false) 
+	const itemActive = useSelector(state => state.dopSetting.value)
+	const dispatch = useDispatch()
+	const [menuOpen, setMenuOpen] = React.useState(false)
 	const menuRef = React.useRef()
+	function special(i){
+		dispatch(setIndex(i))
+		dispatch(setClick(true))
+	}
 	// проверка клика за обэктом
-	if(menuOpen === true){
-		document.body.addEventListener('click', e=>{
-			if(!e.path.includes(menuRef.current)){
+	if (menuOpen === true) {
+		document.body.addEventListener('click', e => {
+			if (!e.path.includes(menuRef.current)) {
 				setMenuOpen(false)
-				console.log(e.path.includes(menuRef.current))
 			}
 		})
 	}
@@ -53,12 +60,18 @@ const Additionally = () => {
 					menuOpen ? 'additionally-list__active' : ''
 				}`}
 			>
-				<li className='additionally-list__item'>Покинути чат</li>
-				<li className='additionally-list__item'>Удалить историю</li>
-				<li className='additionally-list__item'>Змінити назву</li>
+				{itemActive.map((e, i) => (
+					<li
+						key={e}
+						onClick={() => special(i)}
+						className='additionally-list__item'
+					>
+						{e}
+					</li>
+				))}
 			</ul>
 		</div>
 	)
-};
+}
 
-export default Additionally;
+export default Additionally
