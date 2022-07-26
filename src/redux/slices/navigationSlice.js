@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
 	value : ['спільний', 'друзі', 'робота',],
-	num : 0
+	num : 0,
+	open : false
 }
 
 export const navigatiovSlice = createSlice({
@@ -12,7 +13,13 @@ export const navigatiovSlice = createSlice({
 		setNumberCheck: (state, action) => {
 			state.num = action.payload
 		},
+		newChat: (state, action) => {
+			state.value.push(action.payload)
+		},
+		setOpen: (state, action) => {
+			state.open = !state.open
+		},
 	},
 })
-export const { setNumberCheck } = navigatiovSlice.actions
+export const { setNumberCheck, newChat, setOpen } = navigatiovSlice.actions
 export default navigatiovSlice.reducer

@@ -1,0 +1,57 @@
+.popap-add {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(0);
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	box-shadow: 0 0 5px black;
+	padding: 25px;
+	transition: 0.8s;
+	&__button{
+		position: absolute;
+		background:none;
+		top: 5px;
+		img{
+			transition: 0.7s;
+		}
+		right: 5px;
+		&:hover{
+			img{
+			transform: rotate(270deg);}
+		}
+	}
+	&-open{
+		transform: translateX(-50%) translateY(-50%) scale(1);
+	}
+	&__title {
+		font-size: 18px;
+		text-align: center;
+		font-weight: 600;
+	}
+	&__input {
+		border: 1px solid rgba(black, 0.4);
+		padding: 5px;
+		&::placeholder {
+			transition: 0.7s;
+		}
+		&:focus {
+			&::placeholder {
+				transform: translateX(-1000px);
+			}
+		}
+	}
+	&__btn {
+		padding: 5px 20px;
+		color: aliceblue;
+		background-color: red;
+		transition: 0.7s;
+		border: 1px solid rgba(black, 0);
+		&:hover {
+			border: 1px solid black;
+			color: black;
+			background-color: rgb(255, 255, 255);
+		}
+	}
+}

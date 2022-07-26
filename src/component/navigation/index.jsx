@@ -2,8 +2,10 @@ import React from 'react'
 import './navigation.Module.scss'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux/es/exports'
+import {setOpen } from '../../redux/slices/navigationSlice'
 const Navigation = () => {
+	const dispatch = useDispatch()
 	const [activationNav, setActivationNav] = useState(0)
 	const iconMenu = [1, 2,]
 	const link = ['/', '/friends',]
@@ -32,7 +34,7 @@ const Navigation = () => {
 						</Link>
 					))}
 				</ul>
-				<div className='menu__add'>
+				<div onClick={() => dispatch(setOpen())} className='menu__add'>
 					<img src='./img/menu/add.svg' alt='add-new' />
 				</div>
 			</nav>

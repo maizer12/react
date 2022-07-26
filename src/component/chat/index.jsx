@@ -6,8 +6,7 @@ const Chat = () => {
 	const chatItem = useSelector(state => state.navigation.value)
 	const chatNum = useSelector(state => state.navigation.num)
 	const dispatch = useDispatch()
-	//const [itemActive, setItemActive] = useState(0)
-	function parsNum() {}
+	console.log(chatItem)
 	return (
 		<div className='chat'>
 			<div className='chat-hade'>
@@ -17,7 +16,7 @@ const Chat = () => {
 			<ul className='chat-items'>
 				{chatItem.map((e, i) => (
 					<li
-						onClick={() => dispatch (setNumberCheck(i))}
+						onClick={() => dispatch(setNumberCheck(i))}
 						key={i}
 						className={`chat-items__item ${
 							chatNum === i ? 'chat-items__item-active' : ''
