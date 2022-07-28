@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './friends.Module.scss'
-
+import { useDispatch } from 'react-redux'
+import { setPages } from '../redux/slices/navigationSlice'
 const Friends = () => {
 	const [friendsAdd, setFriendsAdd] = React.useState(false)
 	const [floorOpen, setFloorOpen] = React.useState(false)
 	const florItem = ['Не вибрано', 'Чол', 'Жін']
 	const [florActive, setFlorActive] = React.useState(0)
+	const dispatch = useDispatch()
+	useEffect(()=>{
+		if(window.location.href == 'http://localhost:3000/friends'){
+			dispatch(setPages(1))
+		}
+	},[])
+	
 	return (
 		<div className='friends'>
 			<ul className='friends-head'>
@@ -13,7 +21,7 @@ const Friends = () => {
 					<input
 						type='text'
 						placeholder="Введіть ім'я"
-						class='friends-head__input'
+						className='friends-head__input'
 					/>
 					<div className='friends-head__btn'>Пошук</div>
 				</li>
@@ -39,7 +47,7 @@ const Friends = () => {
 						className={`floor__items ${floorOpen ? 'floor__items-active' : ''}`}
 					>
 						{florItem.map((e, i) => (
-							<li
+							<li key={e}
 								onClick={() => setFlorActive(i)}
 								className={`floor__item ${
 									florActive === i ? 'floor__item-active' : ''

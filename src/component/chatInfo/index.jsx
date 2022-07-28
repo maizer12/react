@@ -5,8 +5,8 @@ import './chatInfo.Module.scss'
 import { useSelector } from 'react-redux'
 import Additionally from '../additionally'
 const ChatInfo = () => {
-		const chatItem = useSelector(state => state.navigation.value)
-			const chatNum = useSelector(state => state.navigation.num)
+	const chatItem = useSelector(state => state.navigation.value)
+	const chatNum = useSelector(state => state.navigation.num)
 	return (
 		<div className='chat-info'>
 			<h4 className='chat-info__name'>#{chatItem[chatNum]}</h4>
@@ -33,7 +33,7 @@ const ChatInfo = () => {
 				</li>
 				<Notifications />
 				<li className='chat-info__additionally'>
-					<Additionally/>
+					<Additionally />
 				</li>
 			</ul>
 		</div>

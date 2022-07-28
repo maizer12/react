@@ -50,16 +50,37 @@ const SettingProfile = () => {
 					<h4 className='setting-profile__login'>
 						<span>Логін:</span>
 						{login}
+						<img
+							className='setting-profile__edit'
+							width={10}
+							height={10}
+							src='./img/pen.svg'
+							alt='pen'
+						/>
 					</h4>
 				</li>
 				<li className='setting-profile__item'>
 					<h5 className='setting-profile__name'>
 						<span>Імя:</span> {name}
+						<img
+							className='setting-profile__edit'
+							width={10}
+							height={10}
+							src='./img/pen.svg'
+							alt='pen'
+						/>
 					</h5>
 				</li>
 				<li className='setting-profile__item'>
 					<h5 className='setting-profile__mail'>
 						<span>Mail: </span> {mail}
+						<img
+							className='setting-profile__edit'
+							width={10}
+							height={10}
+							src='./img/pen.svg'
+							alt='pen'
+						/>
 					</h5>
 				</li>
 			</ul>

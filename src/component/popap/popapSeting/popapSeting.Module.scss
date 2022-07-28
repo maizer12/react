@@ -1,0 +1,48 @@
+.popap-setting{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-shadow: 0 0 5px black;
+	padding: 10px;
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	transition: 0.7s;
+	row-gap: 10px;
+	z-index: 20;
+	transform: scale(0);
+	&-active{
+		transform:translateX(-50%) translateY(-50%) scale(1);
+	}
+	&__buttons{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title{
+		font-size: 19px;
+	}
+	&__input{
+		padding: 5px 10px;
+		border: 1px solid rgba(black, 0.4);
+		&::placeholder{
+			transition: 0.7s;
+		}
+		&:focus{
+			&::placeholder{
+				transform: translateX(-800px);
+			}
+		}
+	}
+	&__btn{
+		background-color: red;
+		color: antiquewhite;
+		font-weight: 500;
+		font-size: 17px;
+		padding: 5px 10px;
+		&:hover{
+			background-color: rgb(255, 255, 255);
+			color: black;
+			box-shadow: 0 0 5px black;
+		}
+	}
+}

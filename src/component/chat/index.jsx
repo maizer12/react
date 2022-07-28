@@ -6,7 +6,6 @@ const Chat = () => {
 	const chatItem = useSelector(state => state.navigation.value)
 	const chatNum = useSelector(state => state.navigation.num)
 	const dispatch = useDispatch()
-	console.log(chatItem)
 	return (
 		<div className='chat'>
 			<div className='chat-hade'>

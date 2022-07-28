@@ -1,12 +1,11 @@
 import React from 'react'
 import './navigation.Module.scss'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux/es/exports'
-import {setOpen } from '../../redux/slices/navigationSlice'
+import { useDispatch,  useSelector } from 'react-redux'
+import { setOpen, setPages } from '../../redux/slices/navigationSlice'
 const Navigation = () => {
 	const dispatch = useDispatch()
-	const [activationNav, setActivationNav] = useState(0)
+	const activationNav = useSelector(state => state.navigation.pages)
 	const iconMenu = [1, 2,]
 	const link = ['/', '/friends',]
 	return (
@@ -17,7 +16,7 @@ const Navigation = () => {
 						<Link
 							to={link[i]}
 							key={i}
-							onClick={() => setActivationNav(i)}
+							onClick={() => dispatch(setPages(i))}
 							className={
 								activationNav === i
 									? 'menu__item menu__item-active'

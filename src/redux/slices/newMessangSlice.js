@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
 	value: '',
-	click:false
+	click:false,
+	out:[false, false, false]
 }
 
 export const newMessangSlice = createSlice({
@@ -14,8 +15,10 @@ export const newMessangSlice = createSlice({
 		},
 		setClick: (state, action) =>{
 			state.click = action.payload
+		}, setOut: (state, action) =>{
+			state.out = action.payload
 		}
 	},
 })
-export const { setValue, setClick } = newMessangSlice.actions
+export const { setValue, setClick, setOut } = newMessangSlice.actions
 export default newMessangSlice.reducer
