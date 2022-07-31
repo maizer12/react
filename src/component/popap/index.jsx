@@ -17,6 +17,10 @@ const Popap = () => {
 			dispatch(setOut(outChat.map((e, i) => (i === chatNum ? true : e))))
 			setPopapOpen(false)
 			dispatch(setIndex(55))
+		}else if (click && index === 1) {
+			chat.box = chat.box.filter(e => (e.id === String(chatNum))? e = '':e)
+			setPopapOpen(false)
+			dispatch(setIndex(55))
 		}
 	}, [click])
 	useMemo(() => {

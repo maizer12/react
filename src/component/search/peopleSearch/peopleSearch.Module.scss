@@ -1,0 +1,35 @@
+.friends-head {
+	background-color: #333333;
+	color: aliceblue;
+	padding: 10px;
+	display: block;
+	&__search{
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+	}
+	&__input{
+		padding: 5px 10px;
+		&::placeholder{
+			transition: 0.7s;
+		}
+		&:focus{
+			&::placeholder{
+				transform: translateX(-2000px);
+			}
+		}
+	}
+	&__btn{
+		font-size: 17px;
+		background-color: red;
+		padding: 6px 20px;
+		cursor: pointer;
+		border: 1px solid rgba(#fff, 0);
+		transition: 0.7s;
+		&:hover{
+			color: #333333;
+			background-color: #fff;
+			border: 1px solid #333333;
+		}
+	}
+}

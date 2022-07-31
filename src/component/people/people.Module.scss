@@ -13,6 +13,7 @@
 }
 .people-items{
 	&__item{
+		margin-top: 15px;
 		display: flex;
 		column-gap: 20px;
 		align-items: center;
@@ -28,6 +29,9 @@
 			border: solid 1px #fff;
 			background-color: rgb(13, 240, 13);
 		}
+	}
+	.active{
+		background-color: rgba(black, 0.4);
 	}
 	&__photo{
 		object-fit: cover;

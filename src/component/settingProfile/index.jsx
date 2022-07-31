@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import './settingProfile.Molule.scss'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setOpen, setNum } from '../../redux/slices/profileSlice'
 const SettingProfile = () => {
 	const [openSetting, setOpenSetting] = useState(false)
 	const name = useSelector(state => state.profile.name)
 	const login = useSelector(state => state.profile.login)
 	const mail = useSelector(state => state.profile.mail)
+	const dispatch = useDispatch()
+	function open(i) {
+		dispatch(setOpen())
+		dispatch(setNum(i))
+	}
 	return (
 		<div className='setting-profile'>
 			<button
@@ -36,7 +42,12 @@ const SettingProfile = () => {
 					onClick={() => setOpenSetting(!openSetting)}
 					className='setting-profile__close'
 				>
-					<img width={35} height={35} src='./img/close-user.svg' alt='close' />
+					<img
+						width={35}
+						height={35}
+						src='./img/close-user.svg'
+						alt='close'
+					/>
 				</li>
 
 				<li className='setting-profile__item'>
@@ -51,6 +62,7 @@ const SettingProfile = () => {
 						<span>Логін:</span>
 						{login}
 						<img
+							onClick={() => open(1)}
 							className='setting-profile__edit'
 							width={10}
 							height={10}
@@ -63,6 +75,7 @@ const SettingProfile = () => {
 					<h5 className='setting-profile__name'>
 						<span>Імя:</span> {name}
 						<img
+							onClick={() => open(2)}
 							className='setting-profile__edit'
 							width={10}
 							height={10}
@@ -75,6 +88,7 @@ const SettingProfile = () => {
 					<h5 className='setting-profile__mail'>
 						<span>Mail: </span> {mail}
 						<img
+							onClick={() => open(3)}
 							className='setting-profile__edit'
 							width={10}
 							height={10}
@@ -86,6 +100,6 @@ const SettingProfile = () => {
 			</ul>
 		</div>
 	)
-};
+}
 
-export default SettingProfile;
+export default SettingProfile

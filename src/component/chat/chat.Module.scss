@@ -10,6 +10,10 @@
 	line-height: 14px;
 	letter-spacing: 0px;
 	color: aliceblue;
+	&__name{
+		font-weight: 500;
+		font-size: 18px;
+	}
 }
 .chat-items {
 	display: flex;

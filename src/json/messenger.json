@@ -30,6 +30,26 @@
 			"text": "Пошел отсюда",
 			"date": "18.07.2022"
 		}
+	],
+	"people":[
+		{
+			"id":"0",
+			"login":"Sorus",
+			"name": "Матвей",
+			"mail": "jry57378@xcoxc.com",
+			"telegram": "matvi",
+			"floor": "Чол",
+			"popular": "40"
+		},
+		{
+			"id": "1",
+			"login":"petiFor",
+			"name": "Петя",
+			"mail": "evj39920@jeoce.com",
+			"telegram": "petia",
+			"floor": "Чол",
+			"popular": "48"
+		}
 	]
 }
 

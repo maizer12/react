@@ -12,6 +12,7 @@ const MessageBox = () => {
 	const userMessag = chat.box.filter(e => e.id === String(num))
 	const [chekedMesseng, setChekedMesseng] = React.useState(false)
 	const chatNum = useSelector(state => state.navigation.num)
+	const index = useSelector(state => state.dopSetting.index)
 	const date = new Date()
 	let output =
 		String(date.getDate()).padStart(2, '0') +
@@ -21,7 +22,7 @@ const MessageBox = () => {
 		date.getFullYear()
 	useMemo(() => {
 		userMessag.length >= 1 ? setChekedMesseng(true) : setChekedMesseng(false)
-	}, [num])
+	}, [num, index])
 	useMemo(() => {
 		const object = { id: String(num), name: login, text: value, date: output }
 		if (value.length > 0) {
