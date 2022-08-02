@@ -7,7 +7,6 @@ const FilterFriends = () => {
 		const [florActive, setFlorActive] = React.useState(0)
 		const [filterNum, setFilterNum] = React.useState([false, false, false])
 		useMemo(()=>{
-			console.log(filterNum)
 		}, [filterNum])
 		const flor = function (i){
 			setFlorActive(i)

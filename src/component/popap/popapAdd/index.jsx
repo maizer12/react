@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import './popapAdd.Module.scss'
 import { newChat, setOpen } from '../../../redux/slices/navigationSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { setOut } from '../../../redux/slices/newMessangSlice'
 const PopapAdd = () => {
 	const dispatch = useDispatch()
 	const [inputValue, setInputValue] = useState('')
 	const open = useSelector(state => state.navigation.open)
-	function add(){
-		if(inputValue.length > 1){
+	const out = useSelector(state => state.newMessang.out)
+	function add() {
+		if (inputValue.length > 1) {
 			dispatch(newChat(inputValue))
 			setInputValue('')
 			dispatch(setOpen())
+			dispatch(setOut(out.concat([false])))
 		}
 	}
 	return (
@@ -31,6 +34,6 @@ const PopapAdd = () => {
 			</button>
 		</div>
 	)
-};
+}
 
-export default PopapAdd;
+export default PopapAdd

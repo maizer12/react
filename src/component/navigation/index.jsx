@@ -3,6 +3,7 @@ import './navigation.Module.scss'
 import { Link } from 'react-router-dom'
 import { useDispatch,  useSelector } from 'react-redux'
 import { setOpen, setPages } from '../../redux/slices/navigationSlice'
+
 const Navigation = () => {
 	const dispatch = useDispatch()
 	const activationNav = useSelector(state => state.navigation.pages)

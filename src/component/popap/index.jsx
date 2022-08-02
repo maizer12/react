@@ -12,9 +12,11 @@ const Popap = () => {
 	const [popapOpen, setPopapOpen] = useState(false)
 	const [click, setClick] = useState(false)
 	const dispatch = useDispatch()
+	console.log(index)
 	useEffect(() => {
 		if (click && index === 0) {
-			dispatch(setOut(outChat.map((e, i) => (i === chatNum ? true : e))))
+			dispatch(setOut(outChat.map((e, i) => (
+				i === chatNum ? true : e))))
 			setPopapOpen(false)
 			dispatch(setIndex(55))
 		}else if (click && index === 1) {

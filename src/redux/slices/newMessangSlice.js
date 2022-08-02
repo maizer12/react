@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
 	value: '',
 	click:false,
-	out:[false, false, false]
+	out:[false, false, false,]
 }
 
 export const newMessangSlice = createSlice({
